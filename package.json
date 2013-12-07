@@ -26,6 +26,9 @@
     "line-reader": "~0.2.3",
     "buffered-reader": "~1.0.1"
   },
+  "bundledDependencies": [
+    "leapjs"
+  ],
   "author": "Laurent Eschenauer <laurent@eschenauer.be>",
   "contributors": [
     {
