@@ -43,7 +43,7 @@ function neopixel(name, deps) {
                 break;
             }
             var req = http.request(opts);
-            req.on('error', function(){console.error('No neopixel server')});
+            req.on('error', function(){console.log('No neopixel server!')});
             req.end();
         });
         socket.on('/pilot/drone', function (cmd) {
@@ -74,7 +74,27 @@ function neopixel(name, deps) {
                 break;
             }
             var req = http.request(opts);
-            req.on('error', function(){console.error('No neopixel server')});
+            req.on('error', function(){});
+            req.end();
+        });
+        socket.on('/claw/down', function (cmd) {
+            var req = http.request({
+              hostname: hostname,
+              port: port,
+              method: 'GET',
+              path: '/c'
+            });
+            req.on('error', function(){});
+            req.end();
+        });
+        socket.on('/claw/up', function (cmd) {
+            var req = http.request({
+              hostname: hostname,
+              port: port,
+              method: 'GET',
+              path: '/v'
+            });
+            req.on('error', function(){});
             req.end();
         });
     });
