@@ -64,12 +64,12 @@
                 this.cockpit = cockpit;
                 this.keys = {};
                 this.stopCalled = false;
-                this.palmFrontBackLimit = 0.1;
-                this.palmLeftRightLimit = 0.2;
+                this.palmFrontBackLimit = 0.3;
+                this.palmLeftRightLimit = 0.4;
                 this.palmUpDownLimitBottom = 150;
                 this.palmUpDownLimitTop = 250;
-                this.directionXInit = -0.3;
-                this.directionXTh = 0.3;
+                this.directionXInit = -0.6;
+                this.directionXTh = 0.6;
 
                 // Setup a timer to send motion command
                 var self = this;
